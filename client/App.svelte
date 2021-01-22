@@ -32,7 +32,7 @@
 
   <h1>CPU Temp</h1>
   {#if cpuTemp !== undefined}
-    <value>{cpuTemp.toFixed(1)}</value>
+    <value>{cpuTemp.toFixed(1)}<sup>&deg;</sup>C</value>
   {:else}
     <value class="unknown">Unknown</value>
   {/if}
