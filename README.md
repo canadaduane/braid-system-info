@@ -8,8 +8,6 @@ This is a simple example to help understand Braid subscriptions.
 
 ## Get started
 
-First, install experimental `braid-protocol` project via git, and `yarn link` it:
-
 Install dependencies...
 
 ```bash
