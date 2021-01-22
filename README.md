@@ -4,7 +4,7 @@ Presents system info as [braid-http](https://braid.news) URLs.
 
 ## Why?
 
-This is a simple example to help understand Braid subscriptions.
+This is a simple example to help understand Braid subscriptions. Uses [Svelte](https://svelte.dev) for the client front-end.
 
 ## Get started
 
