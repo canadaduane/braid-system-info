@@ -4,10 +4,30 @@
   "type-disabled": "module",
   "type-comment": "'module' means use es6 import/export",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public",
-    "validate": "svelte-check"
+    "start": "rollup -c && node server/main.js",
+    "serve": "node server/main.js",
+    "build": "rollup -c"
+  },
+  "scripts-comments": {
+    "start": "Starts the web server, serving static assets & braid resources",
+    "serve": "Start the web server (without compiling first)",
+    "build": "Transpiles and bundles Svelte+Typescript, and CSS code into public/build folder"
+  },
+  "dependencies": {
+    "braid-protocol": "josephg/braid-protocol#07e247a2",
+    "cors": "^2.8.5",
+    "osx-temperature-sensor": "^1.0.7",
+    "polka": "^0.5.2",
+    "sirv": "^1.0.0",
+    "systeminformation": "^4.34.7"
+  },
+  "dependencies-comments": {
+    "braid-protocol": "This is the work-in-progress. We pin it to a know working version for this demo.",
+    "cors": "A simple way to tell the polka server to allow cross-origin requests",
+    "osx-temperature-sensor": "Required by systeminformation on OS X",
+    "polka": "Simple web server that we can extend with Braid HTTP",
+    "sirv": "Serve static files ('public' dir)",
+    "systeminformation": "Gathers system information such as CPU temp, etc."
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
@@ -24,12 +44,5 @@
     "svelte-preprocess": "^4.0.0",
     "tslib": "^2.0.0",
     "typescript": "^3.9.3"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "osx-temperature-sensor": "^1.0.7",
-    "polka": "^0.5.2",
-    "sirv-cli": "^1.0.0",
-    "systeminformation": "^4.34.7"
   }
 }
