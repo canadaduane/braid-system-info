@@ -41,7 +41,7 @@ class SubscribableValue {
     if (req.headers.subscribe === "keep-alive") {
       this.addStream(res, currentValue);
     } else {
-      res.headers["content-type"] = "application/json";
+      res.writeHead(200, { "Content-Type": "application/json" });
       res.end(currentValue);
     }
   }
